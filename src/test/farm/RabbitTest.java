@@ -1,3 +1,6 @@
+package farm;
+
+import farm.Rabbit;
 import org.junit.Before;
 import org.junit.Test;
 

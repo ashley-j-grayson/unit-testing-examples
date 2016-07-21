@@ -1,16 +1,18 @@
+package farm;
+
 /**
  * Created by ashleygrayson on 20/07/2016.
  */
-public class Cat {
+public class Dog {
 
     private String name;
-    private int weight;
+    private int age;
 
-    Cat() {
+    Dog() {
 
     }
 
-    Cat(String name) {
+    Dog(String name) {
 
         this.name = name;
     }
@@ -25,14 +27,14 @@ public class Cat {
         this.name = name;
     }
 
-    public int getWeight() {
+    public int getAge() {
 
-        return this.weight;
+        return this.age;
     }
 
-    public void setWeight(int weight) {
+    public void setAge(int age) {
 
-        this.weight = weight;
+        this.age = age;
     }
 
 

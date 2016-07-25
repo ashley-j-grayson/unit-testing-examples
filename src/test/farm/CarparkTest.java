@@ -54,4 +54,72 @@ public class CarparkTest {
         carpark.addTruck(truck2);
         assertThat(carpark.getTrucks().size(), equalTo(2));
     }
+
+    @Test
+    public void testRemovingCar() {
+
+        Car car = new Car("AK60 VHU", "Seat", "Ibiza", 4);
+        Car car2 = new Car("R5 WMB", "Citoren", "C3", 4);
+        Car car3 = new Car("GC15 WWE", "Audi", "A1", 4);
+        Car car4 = new Car("DK63 WMP", "Volkswagen", "Polo", 4);
+        Car car5 = new Car("DX54 CCR", "Nissan", "Micra", 4);
+        Car car6 = new Car("YP63 AJG", "Skoda", "Octavia", 4);
+
+        carpark.addCar(car);
+        carpark.addCar(car2);
+        carpark.addCar(car3);
+        carpark.addCar(car4);
+        carpark.addCar(car5);
+        carpark.addCar(car6);
+
+        carpark.removeCar(car3);
+        carpark.removeCar(car4);
+        carpark.removeCar(car5);
+
+        assertThat(carpark.getCars().size(), equalTo(3));
+    }
+
+    @Test
+    public void testRemovingMotorcycle() {
+
+        Motorcycle motorcycle = new Motorcycle("AK60 VHU", "Suzuki", "SP100", 2);
+        Motorcycle motorcycle2 = new Motorcycle("R5 WMB", "Suzuki", "SP125", 2);
+        Motorcycle motorcycle3 = new Motorcycle("GC15 WWE", "Suzuki", "SP200", 2);
+        Motorcycle motorcycle4 = new Motorcycle("YP63 AJG", "Suzuki", "SP250", 2);
+        Motorcycle motorcycle5 = new Motorcycle("DK63 WMP", "Suzuki", "SP370", 2);
+        Motorcycle motorcycle6 = new Motorcycle("DX54 CCR", "Suzuki", "SP400", 2);
+
+        carpark.addMotorcycle(motorcycle);
+        carpark.addMotorcycle(motorcycle2);
+        carpark.addMotorcycle(motorcycle3);
+        carpark.addMotorcycle(motorcycle4);
+        carpark.addMotorcycle(motorcycle5);
+        carpark.addMotorcycle(motorcycle6);
+
+        carpark.removeMotorcycle(motorcycle);
+        carpark.removeMotorcycle(motorcycle6);
+
+        assertThat(carpark.getMotorcycles().size(), equalTo(4));
+
+    }
+
+    @Test
+    public void testRemovingTruck() {
+
+        Truck truck = new Truck("DC15 KTK", "Jeep", "Cherokee", 8);
+        Truck truck2 = new Truck("AK60 VHU", "Jeep", "Cherokee", 12);
+        Truck truck3 = new Truck("DK53 WMP", "Jeep", "Cherokee", 10);
+        Truck truck4 = new Truck("XY65 DRF", "Jeep", "Cherokee", 6);
+        Truck truck5 = new Truck("JA16 UHV", "Jeep", "Cherokee", 4);
+
+        carpark.addTruck(truck);
+        carpark.addTruck(truck2);
+        carpark.addTruck(truck3);
+        carpark.addTruck(truck4);
+        carpark.addTruck(truck5);
+
+        carpark.removeTruck(truck3);
+
+        assertThat(carpark.getTrucks().size(), equalTo(4));
+    }
 }

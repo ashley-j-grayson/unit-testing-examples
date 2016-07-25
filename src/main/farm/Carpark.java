@@ -51,4 +51,19 @@ public class Carpark {
         }
     }
 
+    public void removeCar(Car car) {
+
+        cars.remove(car);
+    }
+
+    public void removeMotorcycle(Motorcycle motorcycle) {
+
+        motorcycles.remove(motorcycle);
+    }
+
+    public void removeTruck(Truck truck) {
+
+        trucks.remove(truck);
+    }
+
 }

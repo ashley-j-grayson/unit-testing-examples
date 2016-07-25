@@ -3,7 +3,7 @@ package farm;
 /**
  * Created by ashleygrayson on 22/07/2016.
  */
-public class Truck {
+public class Truck extends Vehicle {
 
     private String licencePlate;
     private String make;

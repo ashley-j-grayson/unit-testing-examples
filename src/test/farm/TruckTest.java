@@ -17,7 +17,7 @@ public class TruckTest {
     public void before() { truck = new Truck("GC15 KTK", "Jeep", "Cherokee", 10); }
 
     @Test
-    public void testCarLicencePlate() {
+    public void testTruckLicencePlate() {
 
         Truck truck = new Truck("GC15 KTK", "Jeep", "Cherokee", 10);
         assertThat(truck.getLicencePlate(), equalTo("GC15 KTK"));
@@ -25,13 +25,13 @@ public class TruckTest {
     }
 
     @Test
-    public void testCarMake() {
+    public void testTruckMake() {
         Truck truck = new Truck("GC15 KTK", "Jeep", "Cherokee", 10);
         assertThat(truck.getMake(), equalTo("Jeep"));
     }
 
     @Test
-    public void testCarModel() {
+    public void testTruckModel() {
 
         Truck truck = new Truck("GC15 KTK", "Jeep", "Cherokee", 10);
         assertThat(truck.getModel(), equalTo("Cherokee"));

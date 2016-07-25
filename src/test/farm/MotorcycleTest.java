@@ -17,7 +17,7 @@ public class MotorcycleTest {
     public void before() { motorcycle = new Motorcycle("DK53 VMP", "Suzuki", "TS50 Gaucho", 2); }
 
     @Test
-    public void testCarLicencePlate() {
+    public void testMotorCycleLicencePlate() {
 
         Motorcycle motorcycle = new Motorcycle("DK53 VMP", "Suzuki", "TS50 Gaucho", 2);
         assertThat(motorcycle.getLicencePlate(), equalTo("DK53 VMP"));
@@ -25,13 +25,13 @@ public class MotorcycleTest {
     }
 
     @Test
-    public void testCarMake() {
+    public void testMotorcycleMake() {
         Motorcycle motorcycle = new Motorcycle("DK53 VMP", "Suzuki", "TS50 Gaucho", 2);
         assertThat(motorcycle.getMake(), equalTo("Suzuki"));
     }
 
     @Test
-    public void testCarModel() {
+    public void testMotorCycleModel() {
 
         Motorcycle motorcycle = new Motorcycle("DK53 VMP", "Suzuki", "TS50 Gaucho", 2);
         assertThat(motorcycle.getModel(), equalTo("TS50 Gaucho"));

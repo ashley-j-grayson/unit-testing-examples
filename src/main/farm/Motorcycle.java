@@ -3,7 +3,7 @@ package farm;
 /**
  * Created by ashleygrayson on 22/07/2016.
  */
-public class Motorcycle {
+public class Motorcycle extends Vehicle {
 
     private String licencePlate;
     private String make;
@@ -38,3 +38,4 @@ public class Motorcycle {
         return this.noOfWheels;
     }
 }
+

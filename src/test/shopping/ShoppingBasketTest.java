@@ -49,4 +49,18 @@ public class ShoppingBasketTest {
         assertThat(shoppingBasket.getNoOfItems(), equalTo(2));
     }
 
+    @Test
+    public void testShoppingBasketTotal() {
+
+        ShoppingItem shoppingItem = new ShoppingItem("Jeans", 25.5);
+        ShoppingItem shoppingItem2 = new ShoppingItem("T-shirt", 10.5);
+
+        shoppingBasket.addShoppingItem(shoppingItem);
+        shoppingBasket.addShoppingItem(shoppingItem2);
+
+        assertThat(shoppingBasket.getShoppingBasketTotal(), equalTo(36.0));
+    }
+
+
+
 }

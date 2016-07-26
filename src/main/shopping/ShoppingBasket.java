@@ -10,7 +10,7 @@ public class ShoppingBasket {
 
     private List<ShoppingItem> shoppingItems = new ArrayList<ShoppingItem>();
 
-    public List<ShoppingItem> getShoppingItem() {
+    public List<ShoppingItem> getShoppingItems() {
 
         return this.shoppingItems;
     }
@@ -32,6 +32,20 @@ public class ShoppingBasket {
 
         int noOfItems = this.shoppingItems.size();
         return noOfItems;
+    }
+
+    public double getShoppingBasketTotal() {
+
+        double shoppingBasketTotal = 0;
+
+        for (int i = 0; i < this.shoppingItems.size(); i++) {
+
+             ShoppingItem shoppingItem = this.shoppingItems.get(i);
+             shoppingBasketTotal = shoppingBasketTotal + shoppingItem.getPrice();
+        }
+
+        return shoppingBasketTotal;
+
     }
 
 }

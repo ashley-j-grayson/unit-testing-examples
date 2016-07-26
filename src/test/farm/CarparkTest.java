@@ -122,4 +122,58 @@ public class CarparkTest {
 
         assertThat(carpark.getTrucks().size(), equalTo(4));
     }
+
+    @Test
+    public void testTotalCars() {
+
+        Car car = new Car("AK60 VHU", "Seat", "Ibiza", 4);
+        Car car2 = new Car("R5 WMB", "Citoren", "C3", 4);
+        Car car3 = new Car("GC15 WWE", "Audi", "A1", 4);
+
+        carpark.addCar(car);
+        carpark.addCar(car2);
+        carpark.addCar(car3);
+
+        assertThat(carpark.getNumberOfCars(), equalTo(3));
+    }
+
+    @Test
+    public void testTotalMotorcycles() {
+
+        Motorcycle motorcycle = new Motorcycle("DV59 UFD", "Suzuki", "TS75", 2);
+        Motorcycle motorcycle2 = new Motorcycle("WX65 FDC", "Suzuki", "TS90", 2);
+
+        carpark.addMotorcycle(motorcycle);
+        carpark.addMotorcycle(motorcycle2);
+
+        assertThat(carpark.getNumberOfMotorcycles(), equalTo(2));
+    }
+
+    @Test
+    public void testTotalTrucks() {
+
+        Truck truck = new Truck("AK60 VHU", "Jeep", "Cherokee", 8);
+        Truck truck2 = new Truck("T12 OYU", "Jeep", "Cherokee", 10);
+
+        carpark.addTruck(truck);
+        carpark.addTruck(truck2);
+
+        assertThat(carpark.getNumberOfTrucks(), equalTo(2));
+    }
+
+    @Test
+    public void testTotalVehicles() {
+
+        assertThat(carpark.getNumberOfVehicles(), equalTo(0));
+
+    }
+
+    @Test
+    public void testTotalVehiclesWhenNotEmpty() {
+
+        Car car = new Car("AK60 VHU", "Seat", "Ibiza", 4);
+        carpark.addCar(car);
+
+        assertThat(carpark.getNumberOfVehicles(), equalTo(1));
+    }
 }

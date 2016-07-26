@@ -12,6 +12,7 @@ public class Carpark {
     private List<Motorcycle> motorcycles = new ArrayList<Motorcycle>();
     private List<Truck> trucks = new ArrayList<Truck>();
 
+
     public List<Car> getCars() {
 
         return this.cars;
@@ -64,6 +65,28 @@ public class Carpark {
     public void removeTruck(Truck truck) {
 
         trucks.remove(truck);
+    }
+
+    public int getNumberOfCars() {
+
+        return this.cars.size();
+    }
+
+    public int getNumberOfMotorcycles() {
+
+        return this.motorcycles.size();
+    }
+
+    public int getNumberOfTrucks() {
+
+        return this.trucks.size();
+    }
+
+    public int getNumberOfVehicles() {
+
+
+        int numberOfVehicles = this.cars.size() + this.motorcycles.size() + this.trucks.size();
+        return numberOfVehicles;
     }
 
 }

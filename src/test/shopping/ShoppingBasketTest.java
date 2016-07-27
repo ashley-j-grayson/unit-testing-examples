@@ -108,15 +108,15 @@ public class ShoppingBasketTest {
     @Test
     public void testPostageAndPackagingWithDiscount() {
 
-        ShoppingItem shoppingItem = new ShoppingItem("Trainers", 10.0);
-        ShoppingItem shoppingItem1 = new ShoppingItem("Trainers", 10.0);
+        ShoppingItem shoppingItem = new ShoppingItem("Trainers", 12.5);
+        ShoppingItem shoppingItem1 = new ShoppingItem("Trainers", 12.5);
 
         shoppingBasket.addShoppingItem(shoppingItem);
         shoppingBasket.addShoppingItem(shoppingItem1);
 
         shoppingBasket.setHasDiscount(true);
 
-        assertThat(shoppingBasket.getShoppingBasketTotal(), equalTo(20.0));
+        assertThat(shoppingBasket.getShoppingBasketTotal(), equalTo(24.5));
     }
 
 

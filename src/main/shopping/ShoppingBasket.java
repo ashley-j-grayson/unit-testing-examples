@@ -35,22 +35,24 @@ public class ShoppingBasket {
     public double getShoppingBasketTotal() {
 
         double shoppingBasketTotal = 0;
-        double postageAndPackaging = 1;
+        double postageAndPackagingTotal = 0;
+        double postagePerItem = 1;
 
         for (int i = 0; i < this.shoppingItems.size(); i++) {
 
 
             ShoppingItem shoppingItem = this.shoppingItems.get(i);
-            shoppingBasketTotal = shoppingBasketTotal + shoppingItem.getPrice() + postageAndPackaging;
+            shoppingBasketTotal = shoppingBasketTotal + shoppingItem.getPrice();
+            postageAndPackagingTotal = postageAndPackagingTotal + postagePerItem;
 
         }
 
         if (hasDiscount) {
 
-            return shoppingBasketTotal * 0.9;
+            return (shoppingBasketTotal * 0.9) + postageAndPackagingTotal;
         }
 
-        return shoppingBasketTotal;
+        return shoppingBasketTotal + postageAndPackagingTotal;
 
     }
 

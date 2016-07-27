@@ -61,6 +61,21 @@ public class ShoppingBasketTest {
         assertThat(shoppingBasket.getShoppingBasketTotal(), equalTo(36.0));
     }
 
+    @Test
+    public void testShoppingBasketTotalWithDiscount() {
+
+        ShoppingItem shoppingItem = new ShoppingItem("Jumper", 10.0);
+        ShoppingItem shoppingItem1 = new ShoppingItem("Shorts", 10.0);
+
+        shoppingBasket.addShoppingItem(shoppingItem);
+        shoppingBasket.addShoppingItem(shoppingItem1);
+
+        shoppingBasket.setHasDiscount(true);
+
+        assertThat(shoppingBasket.getShoppingBasketTotal(), equalTo(18.0));
+
+    }
+
 
 
 }

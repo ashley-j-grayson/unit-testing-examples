@@ -9,6 +9,7 @@ import java.util.List;
 public class ShoppingBasket {
 
     private List<ShoppingItem> shoppingItems = new ArrayList<ShoppingItem>();
+    private boolean hasDiscount;
 
     public List<ShoppingItem> getShoppingItems() {
 
@@ -40,12 +41,24 @@ public class ShoppingBasket {
 
         for (int i = 0; i < this.shoppingItems.size(); i++) {
 
+
              ShoppingItem shoppingItem = this.shoppingItems.get(i);
              shoppingBasketTotal = shoppingBasketTotal + shoppingItem.getPrice();
+        }
+
+        if (hasDiscount) {
+
+            return shoppingBasketTotal * 0.9;
         }
 
         return shoppingBasketTotal;
 
     }
+
+    public void setHasDiscount(boolean hasDiscount) {
+
+        this.hasDiscount = hasDiscount;
+    }
+
 
 }

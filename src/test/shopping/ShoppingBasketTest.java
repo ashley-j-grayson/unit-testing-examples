@@ -149,5 +149,13 @@ public class ShoppingBasketTest {
         assertThat(shoppingBasket.getShoppingBasketTotal(), equalTo(20.0));
     }
 
+    @Test
+    public void testEmptyBasket() {
+
+
+        assertThat(shoppingBasket.getNoOfItems(), equalTo(0));
+
+    }
+
 
 }

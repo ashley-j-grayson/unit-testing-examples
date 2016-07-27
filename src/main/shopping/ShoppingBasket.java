@@ -66,5 +66,10 @@ public class ShoppingBasket {
         this.hasDiscount = hasDiscount;
     }
 
+    public void emptyBasket() {
+
+
+    }
+
 
 }

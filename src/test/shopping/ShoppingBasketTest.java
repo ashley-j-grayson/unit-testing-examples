@@ -76,6 +76,18 @@ public class ShoppingBasketTest {
 
     }
 
+   @Test
+    public void testShoppingBasketTotalWithoutDiscount() {
 
+       ShoppingItem shoppingItem = new ShoppingItem("Jumper", 10.0);
+       ShoppingItem shoppingItem1 = new ShoppingItem("Shorts", 10.0);
+
+       shoppingBasket.addShoppingItem(shoppingItem);
+       shoppingBasket.addShoppingItem(shoppingItem1);
+
+       shoppingBasket.setHasDiscount(false);
+
+       assertThat(shoppingBasket.getShoppingBasketTotal(), equalTo(20.0));
+   }
 
 }

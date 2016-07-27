@@ -14,7 +14,9 @@ public class ShoppingItemTest {
     private ShoppingItem shoppingItem;
 
     @Before
-    public void Before() { shoppingItem = new ShoppingItem("Bread", 2.50);}
+    public void Before() {
+        shoppingItem = new ShoppingItem("Bread", 2.50);
+    }
 
     @Test
     public void testName() {

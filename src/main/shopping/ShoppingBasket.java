@@ -18,10 +18,7 @@ public class ShoppingBasket {
 
     public void addShoppingItem(ShoppingItem shoppingItem) {
 
-        if (shoppingItems.contains(shoppingItem) == false) {
-
-            shoppingItems.add(shoppingItem);
-        }
+        shoppingItems.add(shoppingItem);
     }
 
     public void removeShoppingItem(ShoppingItem shoppingItem) {
@@ -38,12 +35,14 @@ public class ShoppingBasket {
     public double getShoppingBasketTotal() {
 
         double shoppingBasketTotal = 0;
+        double postageAndPackaging = 1;
 
         for (int i = 0; i < this.shoppingItems.size(); i++) {
 
 
-             ShoppingItem shoppingItem = this.shoppingItems.get(i);
-             shoppingBasketTotal = shoppingBasketTotal + shoppingItem.getPrice();
+            ShoppingItem shoppingItem = this.shoppingItems.get(i);
+            shoppingBasketTotal = shoppingBasketTotal + shoppingItem.getPrice() + postageAndPackaging;
+
         }
 
         if (hasDiscount) {

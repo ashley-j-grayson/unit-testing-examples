@@ -4,7 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 
-
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
@@ -16,7 +15,9 @@ public class ShoppingBasketTest {
     private ShoppingBasket shoppingBasket;
 
     @Before
-    public void Before() { shoppingBasket = new ShoppingBasket();}
+    public void Before() {
+        shoppingBasket = new ShoppingBasket();
+    }
 
     @Test
     public void testNoOfItems() {
@@ -76,18 +77,47 @@ public class ShoppingBasketTest {
 
     }
 
-   @Test
+    @Test
     public void testShoppingBasketTotalWithoutDiscount() {
 
-       ShoppingItem shoppingItem = new ShoppingItem("Jumper", 10.0);
-       ShoppingItem shoppingItem1 = new ShoppingItem("Shorts", 10.0);
+        ShoppingItem shoppingItem = new ShoppingItem("Jumper", 10.0);
+        ShoppingItem shoppingItem1 = new ShoppingItem("Shorts", 10.0);
 
-       shoppingBasket.addShoppingItem(shoppingItem);
-       shoppingBasket.addShoppingItem(shoppingItem1);
+        shoppingBasket.addShoppingItem(shoppingItem);
+        shoppingBasket.addShoppingItem(shoppingItem1);
 
-       shoppingBasket.setHasDiscount(false);
+        shoppingBasket.setHasDiscount(false);
 
-       assertThat(shoppingBasket.getShoppingBasketTotal(), equalTo(20.0));
-   }
+        assertThat(shoppingBasket.getShoppingBasketTotal(), equalTo(20.0));
+    }
+
+    @Test
+    public void testPostageAndPackagingWithNoDiscount() {
+
+        ShoppingItem shoppingItem = new ShoppingItem("T-shirt", 12.0);
+        ShoppingItem shoppingItem1 = new ShoppingItem("T-shirt", 12.0);
+
+        shoppingBasket.addShoppingItem(shoppingItem);
+        shoppingBasket.addShoppingItem(shoppingItem1);
+
+        shoppingBasket.setHasDiscount(false);
+
+        assertThat(shoppingBasket.getShoppingBasketTotal(), equalTo(26.0));
+    }
+
+    @Test
+    public void testPostageAndPackagingWithDiscount() {
+
+        ShoppingItem shoppingItem = new ShoppingItem("Trainers", 10.0);
+        ShoppingItem shoppingItem1 = new ShoppingItem("Trainers", 10.0);
+
+        shoppingBasket.addShoppingItem(shoppingItem);
+        shoppingBasket.addShoppingItem(shoppingItem1);
+
+        shoppingBasket.setHasDiscount(true);
+
+        assertThat(shoppingBasket.getShoppingBasketTotal(), equalTo(20.0));
+    }
+
 
 }

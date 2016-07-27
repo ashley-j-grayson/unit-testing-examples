@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by ashleygrayson on 26/07/2016.
  */
-public class ShoppingItem  {
+public class ShoppingItem {
 
     private String name;
     private double price;

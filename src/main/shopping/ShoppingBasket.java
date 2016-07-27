@@ -52,6 +52,11 @@ public class ShoppingBasket {
             return (shoppingBasketTotal * 0.9) + postageAndPackagingTotal;
         }
 
+        if (shoppingBasketTotal >= 25.0) {
+
+            postageAndPackagingTotal = 0;
+        }
+
         return shoppingBasketTotal + postageAndPackagingTotal;
 
     }

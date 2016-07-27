@@ -119,5 +119,35 @@ public class ShoppingBasketTest {
         assertThat(shoppingBasket.getShoppingBasketTotal(), equalTo(24.5));
     }
 
+    @Test
+    public void testFreeShipping() {
+
+        ShoppingItem shoppingItem = new ShoppingItem("Hat", 15);
+        ShoppingItem shoppingItem2 = new ShoppingItem("Coat", 15);
+
+        shoppingBasket.addShoppingItem(shoppingItem);
+        shoppingBasket.addShoppingItem(shoppingItem2);
+
+        shoppingBasket.setHasDiscount(false);
+
+
+        assertThat(shoppingBasket.getShoppingBasketTotal(), equalTo(30.0));
+
+    }
+
+    @Test
+    public void testFreeShipping2() {
+
+        ShoppingItem shoppingItem = new ShoppingItem("Jacket", 10);
+        ShoppingItem shoppingItem2 = new ShoppingItem("Jacket", 10);
+
+        shoppingBasket.addShoppingItem(shoppingItem);
+        shoppingBasket.addShoppingItem(shoppingItem2);
+
+        shoppingBasket.setHasDiscount(true);
+
+        assertThat(shoppingBasket.getShoppingBasketTotal(), equalTo(20.0));
+    }
+
 
 }

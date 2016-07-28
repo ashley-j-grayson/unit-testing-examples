@@ -33,4 +33,18 @@ public class LogicPuzzlesTest {
 
         assertThat(b, equalTo(false));
     }
+
+    @Test
+    public void testNumbersAreEqual() {
+
+        boolean b = logicPuzzles.numbersAreEqual(3, 3);
+        assertThat(b, equalTo(true));
+    }
+
+    @Test
+    public void testNumbersAreNotEqual() {
+
+        boolean logic = logicPuzzles.numbersAreEqual(10, 5);
+        assertThat(logic, equalTo(false));
+    }
 }

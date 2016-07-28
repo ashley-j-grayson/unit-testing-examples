@@ -152,6 +152,10 @@ public class ShoppingBasketTest {
     @Test
     public void testEmptyBasket() {
 
+        ShoppingItem shoppingItem = new ShoppingItem("Jacket", 10);
+        shoppingBasket.addShoppingItem(shoppingItem);
+
+        this.shoppingBasket.emptyBasket();
 
         assertThat(shoppingBasket.getNoOfItems(), equalTo(0));
 

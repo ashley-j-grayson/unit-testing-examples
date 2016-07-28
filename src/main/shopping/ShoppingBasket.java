@@ -68,6 +68,7 @@ public class ShoppingBasket {
 
     public void emptyBasket() {
 
+        this.shoppingItems.clear();
 
     }
 

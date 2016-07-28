@@ -8,7 +8,7 @@ public class LogicPuzzles {
     public boolean logicValue(int a, int b, int c) {
 
 
-        int total = a + b + c;
+         int total = a + b + c;
 
         if (total <= 10) {
 

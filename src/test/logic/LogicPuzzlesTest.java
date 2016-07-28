@@ -21,8 +21,8 @@ public class LogicPuzzlesTest {
     @Test
     public void testLessThan10Logic() {
 
-        boolean b = logicPuzzles.logicValue(2, 1, 4);
+         boolean b =  logicPuzzles.logicValue(2, 1, 4);
 
-        assertThat(b, equalTo(7));
+        assertThat(b, equalTo(false));
     }
 }

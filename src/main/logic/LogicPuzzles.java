@@ -37,15 +37,18 @@ public class LogicPuzzles {
         return String.valueOf(lengthOfString).length();
     }
 
-    public String longestStringLength(int string1, int string2) {
+    public String longestStringLength(String string1, String string2) {
 
-        if (string1 > string2) {
+        if (string1.length() > string2.length()) {
 
-            return String.valueOf(string1);
+            return string1;
 
+        } else if (string1.length() == string2.length()) {
+
+            return string1 + string2;
         } else {
 
-            return String.valueOf(string2);
+            return string2;
         }
     }
 }

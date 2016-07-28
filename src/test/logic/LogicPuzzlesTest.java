@@ -21,7 +21,7 @@ public class LogicPuzzlesTest {
     @Test
     public void testLessThan10Logic() {
 
-         boolean b = logicPuzzles.logicValue(2, 1, 4);
+        boolean b = logicPuzzles.logicValue(2, 1, 4);
 
         assertThat(b, equalTo(true));
     }
@@ -58,7 +58,14 @@ public class LogicPuzzlesTest {
     @Test
     public void testLongestString() {
 
-        String longestString = logicPuzzles.longestStringLength(8, 4);
-        assertThat(longestString, equalTo(8));
+        String longestString = logicPuzzles.longestStringLength("Hello", "Hello World");
+        assertThat(longestString, equalTo("Hello World"));
+    }
+
+    @Test
+    public void testSameStringSize() {
+
+        String sameSizeString = logicPuzzles.longestStringLength("Hello!", "Ashley");
+        assertThat(sameSizeString, equalTo("Hello!" + "Ashley"));
     }
 }

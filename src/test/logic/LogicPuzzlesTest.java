@@ -47,4 +47,11 @@ public class LogicPuzzlesTest {
         boolean logic = logicPuzzles.numbersAreEqual(10, 5);
         assertThat(logic, equalTo(false));
     }
+
+    @Test
+    public void testLengthOfString() {
+
+        int word = logicPuzzles.getStringLength("Hello");
+        assertThat(word, equalTo(5));
+    }
 }

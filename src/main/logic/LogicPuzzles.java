@@ -35,5 +35,10 @@ public class LogicPuzzles {
             return false;
         }
     }
+
+    public int getStringLength(String lengthOfString) {
+
+        return String.valueOf(lengthOfString).length();
+    }
 }
 

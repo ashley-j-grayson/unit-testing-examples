@@ -54,4 +54,11 @@ public class LogicPuzzlesTest {
         int word = logicPuzzles.getStringLength("Hello");
         assertThat(word, equalTo(5));
     }
+
+    @Test
+    public void testLongestString() {
+
+        String longestString = logicPuzzles.longestStringLength(8, 4);
+        assertThat(longestString, equalTo(8));
+    }
 }

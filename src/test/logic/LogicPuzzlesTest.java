@@ -15,13 +15,21 @@ public class LogicPuzzlesTest {
 
     @Before
     public void before() {
-        LogicPuzzles logicPuzzles = new LogicPuzzles();
+        logicPuzzles = new LogicPuzzles();
     }
 
     @Test
     public void testLessThan10Logic() {
 
-         boolean b =  logicPuzzles.logicValue(2, 1, 4);
+         boolean b = logicPuzzles.logicValue(2, 1, 4);
+
+        assertThat(b, equalTo(true));
+    }
+
+    @Test
+    public void testMoreThan10() {
+
+        boolean b = logicPuzzles.logicValue(5, 4, 3);
 
         assertThat(b, equalTo(false));
     }

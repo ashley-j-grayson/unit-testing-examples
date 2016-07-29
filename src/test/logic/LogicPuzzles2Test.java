@@ -44,4 +44,15 @@ public class LogicPuzzles2Test {
         assertThat(inFullText, equalTo(true));
     }
 
+    @Test
+    public void stringIsInString_returnsFalse_ifStringContainsTextToFind() {
+
+        String fullText = "Ashley Grayson";
+        String textToFind = "John";
+
+        boolean inFullText = logicPuzzles2.stringIsInString(fullText, textToFind);
+
+        assertThat(inFullText, equalTo(false));
+    }
+
 }

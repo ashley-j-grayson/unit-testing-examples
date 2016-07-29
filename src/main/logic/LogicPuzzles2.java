@@ -17,9 +17,9 @@ public class LogicPuzzles2 {
         for (int i = 0; i < numbers.length; i++) {
 
             sum = sum + numbers[i];
-            average = sum / numbers.length;
         }
 
+        average = sum / numbers.length;
         return average;
     }
 
@@ -31,10 +31,12 @@ public class LogicPuzzles2 {
         for (int i = 0; i < numbers.length; i++) {
 
             sum = sum + numbers[i];
-            sumDoubled = sum * 2;
         }
 
+        sumDoubled = sum * 2;
         return sumDoubled;
     }
+
+
 
 }

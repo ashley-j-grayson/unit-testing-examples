@@ -34,4 +34,14 @@ public class LogicPuzzles2Test {
         assertThat(sumDoubled, equalTo(30));
     }
 
+    @Test
+    public void stringIsInString_returnsTrue_ifStringContainsTextToFind() {
+        String fullText = "Once upon a time";
+        String textToFind = "upon";
+
+        boolean inFullText = logicPuzzles2.stringIsInString(fullText, textToFind);
+
+        assertThat(inFullText, equalTo(true));
+    }
+
 }

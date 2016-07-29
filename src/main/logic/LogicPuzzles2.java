@@ -37,6 +37,16 @@ public class LogicPuzzles2 {
         return sumDoubled;
     }
 
+    public boolean stringIsInString(String fullText, String textToFind) {
 
+
+        if (fullText.contains(textToFind)) {
+
+            return true;
+        } else {
+
+             return false;
+        }
+    }
 
 }

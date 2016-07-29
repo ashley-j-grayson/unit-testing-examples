@@ -55,4 +55,12 @@ public class LogicPuzzles2Test {
         assertThat(inFullText, equalTo(false));
     }
 
+    @Test
+    public void stringTimes_shouldRepeatTheStringTheCorrectNumberOfTimes() {
+        String output = logicPuzzles2.stringTimes("Hi", 3);
+
+        assertThat(output, equalTo("HiHiHi"));
+
+    }
+
 }

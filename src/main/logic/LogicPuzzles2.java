@@ -3,6 +3,7 @@ package logic;
 import farm.Person;
 
 import java.util.List;
+import java.util.StringJoiner;
 
 /**
  * Created by ashleygrayson on 29/07/2016.
@@ -48,5 +49,21 @@ public class LogicPuzzles2 {
              return false;
         }
     }
+
+    public String stringTimes(String text, int numberOfTimes) {
+
+        String output = "";
+
+        for (int i = 0; i < numberOfTimes; i++) {
+
+            output = text + output;
+        }
+
+        return output;
+
+    }
+
+
+
 
 }

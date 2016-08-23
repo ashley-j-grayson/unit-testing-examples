@@ -1,5 +1,6 @@
 package logic;
 
+import farm.Car;
 import farm.Person;
 
 import java.util.List;
@@ -9,6 +10,9 @@ import java.util.StringJoiner;
  * Created by ashleygrayson on 29/07/2016.
  */
 public class LogicPuzzles2 {
+
+    private String name;
+    private int age;
 
     public double getAverageOfNumbers(int[] numbers) {
 
@@ -46,7 +50,7 @@ public class LogicPuzzles2 {
             return true;
         } else {
 
-             return false;
+            return false;
         }
     }
 
@@ -63,7 +67,25 @@ public class LogicPuzzles2 {
 
     }
 
+    public double getAverageAge(List<Person> people) {
 
+        Person(String name, int age) {
+
+            this.name = name;
+            this.age = age;
+
+        }
+
+        int sum = 0;
+        double average = 0;
+        for (int i = 0; i < people.size(); i++) {
+            sum += i;
+        }
+
+        average = sum / people.size();
+
+        return average;
+    }
 
 
 }

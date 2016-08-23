@@ -1,7 +1,11 @@
 package logic;
 
+import farm.Person;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -13,7 +17,9 @@ public class LogicPuzzles2Test {
     private LogicPuzzles2 logicPuzzles2;
 
     @Before
-    public void before() {logicPuzzles2 = new LogicPuzzles2();}
+    public void before() {
+        logicPuzzles2 = new LogicPuzzles2();
+    }
 
     @Test
     public void testAverage() {
@@ -63,4 +69,21 @@ public class LogicPuzzles2Test {
 
     }
 
+    @Test
+    public void getAverageAge_returnsAverageAgeOfPeople() {
+        Person rick = new Person("Rick", 35);
+        Person ashley = new Person("Ashley", 21);
+        Person mum = new Person("Mum", 55);
+
+        List<Person> people = new ArrayList<Person>();
+        people.add(rick);
+        people.add(ashley);
+        people.add(mum);
+
+        double averageAge = logicPuzzles2.getAverageAge(people);
+
+        assertThat(averageAge, equalTo(37.0));
+
+
+    }
 }

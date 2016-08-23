@@ -11,8 +11,6 @@ import java.util.StringJoiner;
  */
 public class LogicPuzzles2 {
 
-    private String name;
-    private int age;
 
     public double getAverageOfNumbers(int[] numbers) {
 
@@ -69,17 +67,13 @@ public class LogicPuzzles2 {
 
     public double getAverageAge(List<Person> people) {
 
-        Person(String name, int age) {
-
-            this.name = name;
-            this.age = age;
-
-        }
-
+        int age = 0;
         int sum = 0;
         double average = 0;
         for (int i = 0; i < people.size(); i++) {
-            sum += i;
+            Person somePerson = people.get(i);
+            age = somePerson.getAge();  //replace 0 with the persons age
+            sum += age;
         }
 
         average = sum / people.size();
